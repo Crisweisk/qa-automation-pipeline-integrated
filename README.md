@@ -82,3 +82,7 @@ Passionate about technology, discipline, and continuous growth.
 If you want to know more about this project or have a job opportunity that fits my profile, feel free to contact me via GitHub or LinkedIn. I'm ready to begin!
 
 
+<!-- Activating CI/CD with GitHub Actions -->
+git add .
+git commit -m "Activating CI with GitHub Actions"
+git push origin main
