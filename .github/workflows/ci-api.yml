@@ -1,0 +1,29 @@
+name: QA Automation CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Newman and reporter
+        run: |
+          npm install -g newman newman-reporter-htmlextra
+
+      - name: Run API tests with Newman
+        run: |
+          newman run api-tests/crud-api-tests.json \
+          -r cli,html,htmlextra \
+          --reporter-html-export api-tests/report.html
