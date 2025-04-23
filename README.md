@@ -40,7 +40,7 @@ Make sure you have the following installed:
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/Hyokenhi/qa-automation-pipeline-integrated.git
+git clone https://github.com/your-username/qa-automation-pipeline-integrated.git
 cd qa-automation-pipeline-integrated
 ```
 
